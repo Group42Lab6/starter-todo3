@@ -59,6 +59,10 @@ class Views extends Application {
         foreach($this->input->post() as $key=>$value) {
             if (substr($key,0,4) == 'task') {
                 // find the associated task
+                $taskid = substr($key,4);
+                $task = $this->tasks->get($taskid);
+                $task->status = 2; // complete
+                $this->tasks->update($task);
             }
         }
         $this->index();
