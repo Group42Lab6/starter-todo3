@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2017 at 01:35 AM
+-- Generation Time: Mar 11, 2017 at 08:13 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -39,7 +39,8 @@ CREATE TABLE `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('fqr439n2mqupld9end0nhm52g95a39rq', '::1', 1489105652, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438393130353634383b);
+('fqr439n2mqupld9end0nhm52g95a39rq', '::1', 1489105652, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438393130353634383b),
+('jatotqvh3brvrekv497iod5sd73knuo4', '::1', 1489216216, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438393231363138373b75736572726f6c657c733a353a224f776e6572223b);
 
 -- --------------------------------------------------------
 
