@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.3
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 14, 2017 at 08:40 AM
--- Server version: 5.7.13
--- PHP Version: 7.0.8
+-- Host: 127.0.0.1
+-- Generation Time: Mar 11, 2017 at 08:13 AM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `todo`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ci_sessions`
+--
+
+DROP TABLE IF EXISTS `ci_sessions`;
+CREATE TABLE `ci_sessions` (
+  `id` varchar(128) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `data` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
+('fqr439n2mqupld9end0nhm52g95a39rq', '::1', 1489105652, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438393130353634383b),
+('jatotqvh3brvrekv497iod5sd73knuo4', '::1', 1489216216, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438393231363138373b75736572726f6c657c733a353a224f776e6572223b);
 
 -- --------------------------------------------------------
 
@@ -165,6 +187,13 @@ INSERT INTO `tasks` (`id`, `task`, `priority`, `size`, `group`, `deadline`, `sta
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `ci_sessions`
+--
+ALTER TABLE `ci_sessions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `ci_sessions_timestamp` (`timestamp`);
 
 --
 -- Indexes for table `flags`
